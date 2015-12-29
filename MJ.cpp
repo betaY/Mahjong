@@ -403,6 +403,95 @@ bool MJ::checkPengPai(int p_type, int p_value) {
   m_tempPengPAIVec.clear();
   // 饼
   if (m_MyPAIVec[p_type].empty() == false) {
-    
+    int iSize = m_MyPAIVec[p_type].size();
+    if (iSize >= 2) {
+      for (UINT i = 0; i < iSize-1; i++) {
+        if (m_MyPAIVec[p_type][i]==p_value && m_MyPAIVec[p_type][i+1]==p_value) {
+          stPAI t_peng;
+          t_peng.m_type = p_type;
+          t_peng.m_value = p_value;
+          m_tempPengPAIVec.push_back(t_peng);
+          break;
+        }
+      }
+    }
+    if (m_tempChiPAIVec.size() > 0) {
+      return true;
+    }
   }
+  return false;
+}
+
+// 碰牌
+bool MJ::DoPengPai(int p_type, int p_value) {
+  AddPai(p_type, p_value);
+  vector<stPAI>::iterator Iter;
+  for (Iter=m_tempPengPAIVec.begin(); Iter != m_tempPengPAIVec.end(); Iter++) {
+    delPai((*Iter).m_type, (*Iter).m_value);
+    delPai((*Iter).m_type, (*Iter).m_value);
+    delPai((*Iter).m_type, (*Iter).m_value);
+
+    m_PengPAIVec[(*Iter).m_type].push_back((*Iter).m_value);
+    m_PengPAIVec[(*Iter).m_type].push_back((*Iter).m_value);
+    m_PengPAIVec[(*Iter).m_type].push_back((*Iter).m_value);
+    return true;
+  }
+  return false;
+}
+
+// 杠牌
+bool MJ::checkGangPai(int p_type, int p_value) {
+  m_tempGangPAIVec.clear();
+
+  if (m_MyPAIVec[p_type].empty() == false) {
+    int iSize = m_MyPAIVec[p_type].size();
+    if (iSize >= 3) {
+      for (UINT i = 0; i < size-2; i++) {
+        if ((m_MyPAIVec[p_type][i]==p_value) && (m_MyPAIVec[p_type][i+1]==p_value) && (m_MyPAIVec[p_type][i+2]==p_value)) {
+          stPAI t_gang;
+          t_gang.m_type = p_type;
+          t_gang.m_value = p_value;
+          m_tempGangPAIVec.push_back(t_gang);
+          break;
+        }
+      }
+    }
+    if (m_tempGangPAIVec.size() > 0) {
+      return true;
+    }
+  }
+  return false;
+}
+
+// 杠
+bool DoGangPai(int p_type, int p_value) {
+  AddPai(p_type, p_value);
+  vector<stPAI>::iterator Iter;
+  for (Iter=m_tempGangPAIVec.begin(); Iter != m_tempGangPAIVec.end(); Iter++) {
+    delPai((*Iter).m_type, (*Iter).m_value);
+    delPai((*Iter).m_type, (*Iter).m_value);
+    delPai((*Iter).m_type, (*Iter).m_value);
+    delPai((*Iter).m_type, (*Iter).m_value);
+
+    //
+    if (m_GangPAIVec[(*Iter).m_type].empty()) {
+      m_GangPAIVec[(*Iter).m_type].push_back((*Iter).m_value);
+      m_GangPAIVec[(*Iter).m_type].push_back((*Iter).m_value);
+      m_GangPAIVec[(*Iter).m_type].push_back((*Iter).m_value);
+      m_GangPAIVec[(*Iter).m_type].push_back((*Iter).m_value);
+    } else {
+      vector<int>::iterator Iter2;
+      for (Iter2=m_GangPAIVec[(*Iter).m_type].begin(); Iter2 != m_GangPAIVec[(*Iter).m_type].end(); Iter2++) {
+        if ((*Iter2) > (*Iter).m_value) {
+          m_GangPAIVec[(*Iter).m_type].insert(Iter2, (*Iter).m_value);
+          m_GangPAIVec[(*Iter).m_type].insert(Iter2, (*Iter).m_value);
+          m_GangPAIVec[(*Iter).m_type].insert(Iter2, (*Iter).m_value);
+          m_GangPAIVec[(*Iter).m_type].insert(Iter2, (*Iter).m_value);
+          break;
+        }
+      }
+    }
+    return true;
+  }
+  return false;
 }

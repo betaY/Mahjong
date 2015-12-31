@@ -151,11 +151,11 @@ private:
   bool Check1BK_HU();
   // 7.抢杠
   bool CheckQG_HU();
-  // 8.检测岭上开花
+  // 8.岭上开花
   bool CheckLSKH_HU();
-  // 9.检测河底捞鱼
+  // 9.河底捞鱼
   bool CheckHDLY_HU();
-  // 10.检测海底摸月
+  // 10.海底摸月
   bool CheckHDMY_HU();
   // 11.双立直
   bool CheckSLZ_HU();

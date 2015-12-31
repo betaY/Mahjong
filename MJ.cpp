@@ -495,3 +495,106 @@ bool DoGangPai(int p_type, int p_value) {
   }
   return false;
 }
+
+bool MJ::checkAllPai(bool GetOrPut) {
+  if (GetOrPut == MJPAI_GETPAI) {
+    // 1.役牌
+    if (CheckYP_HU()) {
+      strcpy(m_GoodInfo.m_goodName,"役牌");
+      m_GoodInfo.m_goodValue = 1;
+      return true;
+    }
+    // 2.立直
+    if (CheckLZ_HU()) {
+      strcpy(m_GoodInfo.m_goodName,"立直");
+      m_GoodInfo.m_goodValue = 1;
+      return true;
+    }
+    // 3.断幺
+    if (CheckDY_HU()) {
+      strcpy(m_GoodInfo.m_goodName,"断幺");
+      m_GoodInfo.m_goodValue = 1;
+      return true;
+    }
+    // 4.平和
+    if (CheckHU()) {
+      strcpy(m_GoodInfo.m_goodName,"平和");
+      m_GoodInfo.m_goodValue = 1;
+      return true;
+    }
+    // 5.一发
+    if (Check1F_HU()) {
+      strcpy(m_GoodInfo.m_goodName,"一发");
+      m_GoodInfo.m_goodValue = 1;
+      return true;
+    }
+    // 6.一杯口
+    if (Check1BK_HU()) {
+      strcpy(m_GoodInfo.m_goodName,"一杯口");
+      m_GoodInfo.m_goodValue = 1;
+      return true;
+    }
+    // 7.抢杠
+    if (CheckQG_HU()) {
+      strcpy(m_GoodInfo.m_goodName,"抢杠");
+      m_GoodInfo.m_goodValue = 1;
+      return true;
+    }
+    // 8.岭上开花
+    if (CheckLSKH_HU()) {
+      strcpy(m_GoodInfo.m_goodName,"岭上开花");
+      m_GoodInfo.m_goodValue = 1;
+      return true;
+    }
+    // 9.河底捞鱼
+    if (CheckHDLY_HU()) {
+      strcpy(m_GoodInfo.m_goodName,"河底捞鱼");
+      m_GoodInfo.m_goodValue = 1;
+      return true;
+    }
+    // 10.海底摸月
+    if (CheckHDMY_HU()) {
+      strcpy(m_GoodInfo.m_goodName,"海底摸月");
+      m_GoodInfo.m_goodValue = 1;
+      return true;
+    }
+    // 11.双立直
+    if (CheckSLZ_HU()) {
+      strcpy(m_GoodInfo.m_goodName,"双立直");
+      m_GoodInfo.m_goodValue = 1;
+      return true;
+    }
+    // 12.一气贯通
+    if (Check1QGT_HU()) {
+      strcpy(m_GoodInfo.m_goodName,"一气贯通");
+      m_GoodInfo.m_goodValue = 1;
+      return true;
+    }
+    // 13.小三元
+    if (CheckX3Y_HU()) {
+      strcpy(m_GoodInfo.m_goodName,"小三元");
+      m_GoodInfo.m_goodValue = 1;
+      return true;
+    }
+    // 14.三色同顺
+    if (Check3STS_HU()) {
+      strcpy(m_GoodInfo.m_goodName,"三色同顺");
+      m_GoodInfo.m_goodValue = 1;
+      return true;
+    }
+    // 15.三色同刻
+    if (Check3STK_HU()) {
+      strcpy(m_GoodInfo.m_goodName,"三色同刻");
+      m_GoodInfo.m_goodValue = 1;
+      return true;
+    }
+    // 16.三暗刻
+    if (Check3AK_HU()) {
+      strcpy(m_GoodInfo.m_goodName,"三暗刻");
+      m_GoodInfo.m_goodValue = 1;
+      return true;
+    }
+    // 17.三杠子
+    
+  }
+}

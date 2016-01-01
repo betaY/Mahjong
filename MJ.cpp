@@ -595,6 +595,100 @@ bool MJ::checkAllPai(bool GetOrPut) {
       return true;
     }
     // 17.三杠子
-    
+    if (Check3GZ_HU()) {
+      strcpy(m_GoodInfo.m_goodName,"三杠子");
+      m_GoodInfo.m_goodValue = 1;
+      return true;
+    }
+    // 18.全带幺九
+    if (CheckQDYJ_HU()) {
+      strcpy(m_GoodInfo.m_goodName,"全带幺九");
+      m_GoodInfo.m_goodValue = 1;
+      return true;
+    }
+    // 19.七对子
+    if (Check7D_HU()) {
+      strcpy(m_GoodInfo.m_goodName,"七对子");
+      m_GoodInfo.m_goodValue = 1;
+      return true;
+    }
+    // 20.对对和
+    if (CheckDDH_HU()) {
+      strcpy(m_GoodInfo.m_goodName,"对对和");
+      m_GoodInfo.m_goodValue = 1;
+      return true;
+    }
+    // 21.两杯口
+    if (CheckLBK_HU()) {
+      strcpy(m_GoodInfo.m_goodName,"两杯口");
+      m_GoodInfo.m_goodValue = 1;
+      return true;
+    }
+    // 22.混一色
+    if (CheckH1S_HU()) {
+      strcpy(m_GoodInfo.m_goodName,"混一色");
+      m_GoodInfo.m_goodValue = 1;
+      return true;
+    }
+    // 23.混老头
+    if (CheckHLT_HU()) {
+      strcpy(m_GoodInfo.m_goodName,"混老头");
+      m_GoodInfo.m_goodValue = 1;
+      return true;
+    }
+    // 24.纯全带幺
+    if (CheckCQDY_HU()) {
+      strcpy(m_GoodInfo.m_goodName,"纯全带幺");
+      m_GoodInfo.m_goodValue = 1;
+      return true;
+    }
+    // 25.流局满贯
+    if (CheckLJMG_HU()) {
+      strcpy(m_GoodInfo.m_goodName,"流局满贯");
+      m_GoodInfo.m_goodValue = 1;
+      return true;
+    }
+    // 26.清一色
+    if (CheckQ1S_HU()) {
+      strcpy(m_GoodInfo.m_goodName,"清一色");
+      m_GoodInfo.m_goodValue = 1;
+      return true;
+    }
+    // 27.小四喜
+    if (CheckX4X_HU()) {
+      strcpy(m_GoodInfo.m_goodName,"小四喜");
+      m_GoodInfo.m_goodValue = 1;
+      return true;
+    }
+    // 28.天和
+    if (CheckTH_HU()) {
+      strcpy(m_GoodInfo.m_goodName,"天和");
+      m_GoodInfo.m_goodValue = 1;
+      return true;
+    }
+    // 29.地和
+    if (CheckDH_HU()) {
+      strcpy(m_GoodInfo.m_goodName,"地和");
+      m_GoodInfo.m_goodValue = 1;
+      return true;
+    }
+    // 30.人和
+    if (CheckRH_HU()) {
+      strcpy(m_GoodInfo.m_goodName,"人和");
+      m_GoodInfo.m_goodValue = 1;
+      return true;
+    }
+    // 31.四杠子
+    if (Check4Gang_HU()) {
+      strcpy(m_GoodInfo.m_goodName,"四杠子");
+      m_GoodInfo.m_goodValue = 1;
+      return true;
+    }
+    // 32.四暗刻
+    if (Check4AK_HU()) {
+      strcpy(m_GoodInfo.m_goodName,"四暗刻");
+      m_GoodInfo.m_goodValue = 1;
+      return true;
+    }
   }
 }

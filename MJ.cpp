@@ -690,5 +690,47 @@ bool MJ::checkAllPai(bool GetOrPut) {
       m_GoodInfo.m_goodValue = 1;
       return true;
     }
+    // 33.清老头
+    if (CheckQLT_HU()) {
+      strcpy(m_GoodInfo.m_goodName,"清老头");
+      m_GoodInfo.m_goodValue = 1;
+      return true;
+    }
+    // 34.绿一色
+    if (CheckL1S_HU()) {
+      strcpy(m_GoodInfo.m_goodName,"绿一色");
+      m_GoodInfo.m_goodValue = 1;
+      return true;
+    }
+    // 35.九莲宝灯
+    if (Check9LBD_HU()) {
+      strcpy(m_GoodInfo.m_goodName,"九莲宝灯");
+      m_GoodInfo.m_goodValue = 1;
+      return true;
+    }
+    // 36.国士无双
+    if (CheckGSWS_HU()) {
+      strcpy(m_GoodInfo.m_goodName,"国士无双");
+      m_GoodInfo.m_goodValue = 1;
+      return true;
+    }
+    // 37.大三元
+    if (CheckD3Y_HU()) {
+      strcpy(m_GoodInfo.m_goodName,"大三元");
+      m_GoodInfo.m_goodValue = 1;
+      return true;
+    }
+    // 38.大车轮
+    if (CheckDCL_HU()) {
+      strcpy(m_GoodInfo.m_goodName,"大车轮");
+      m_GoodInfo.m_goodValue = 1;
+      return true;
+    }
+    // 39.大四喜
+    if (CheckD4X_HU()) {
+      strcpy(m_GoodInfo.m_goodName,"大四喜");
+      m_GoodInfo.m_goodValue = 1;
+      return true;
+    }
   }
 }

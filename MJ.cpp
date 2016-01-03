@@ -732,5 +732,15 @@ bool MJ::checkAllPai(bool GetOrPut) {
       m_GoodInfo.m_goodValue = 1;
       return true;
     }
+  } else {
+    m_9LBD = Check9LBD_TING();
+    if (m_9LBD) {
+      return true;
+    }
+    m_GSWS = CheckGSWS_TING();
+    if (m_GSWS) {
+      return true;
+    }
+    return CheckTING();
   }
 }

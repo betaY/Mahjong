@@ -744,3 +744,29 @@ bool MJ::checkAllPai(bool GetOrPut) {
     return CheckTING();
   }
 }
+
+inline bool MJ::checkAAPai(int iValue1, int iValue2) {
+  if (iValue1 == iValue2) return true;
+  return false;
+}
+
+inline bool MJ::checkABCPai(int iValue1, int iValue2, int iValue3) {
+  if (iValue1==(iValue2-1) && iValue2==(iValue3-1)) return true;
+  return false;
+}
+
+inline bool MJ::checkAAAPai(int iValue1, int iValue2, int iValue3) {
+  if (iValue1==iValue2 && iValue2==iValue3) return true;
+  return false;
+}
+
+inline bool MJ::checkAAAAPai(int iValue1, int iValue2, int iValue3, int iValue4) {
+  if (iValue1==iValue2 && iValue2==iValue3 && iValue3==iValue4) return true;
+  return false;
+}
+
+inline bool MJ::checkAABBCCPai(int iValue1, int iValue2, int iValue3, int iValue4, int iValue5, int iValue6) {
+  if (iValue1==iValue2 && iValue3==iValue4 && iValue5==iValue6) {
+
+  }
+}

@@ -773,3 +773,7 @@ inline bool MJ::checkAABBCCPai(int iValue1, int iValue2, int iValue3, int iValue
   }
   return false;
 }
+
+inline bool MJ::checkAAABBBCCCPai(int iValue1, int iValue2, int iValue3, int iValue4, int iValue5, int iValue6, int iValue7, int iValue8, int iValue9) {
+  
+}

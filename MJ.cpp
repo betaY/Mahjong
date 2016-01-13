@@ -784,5 +784,10 @@ inline bool MJ::checkAAABBBCCCPai(int iValue1, int iValue2, int iValue3, int iVa
 }
 
 inline bool MJ::checkAABBCCDDEEFFPai(int iValue1, int iValue2, int iValue3, int iValue4, int iValue5, int iValue6, int iValue7, int iValue8, int iValue9, int iValue10, int iValue11, int iValue12) {
+  if (iValue1==iValue2 && iValue3==iValue4 && iValue5==iValue6 && iValue7==iValue8 && iValue9==iValue10 && iValue11==iValue12) {
+    if (iValue1==iValue3-1 && iValue3==iValue5-1 && iValue5==iValue7-1 && iValue7==iValue9-1 && iValue9==iValue11-1) {
+      return true;
+    }
+  }
   return false;
 }
